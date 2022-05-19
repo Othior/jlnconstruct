@@ -1,0 +1,16 @@
+<nav>
+    <div class="logo">
+        <a class="logo_lien" href="">
+            <img class="image_logo" src="../../assets/logo.png" alt="logo" />
+        </a>
+    </div>
+    <ul class="lien_groupe" #menu>
+        <li class="lien_item" *ngFor="let link of liens">
+            <a class="lien" href={{link.lien}}> {{link.nom}}</a>
+        </li>
+    </ul>
+    <div class="menu_burger" (click)="menuBurger(menu)">
+        <img src={{logo}} alt="">
+        <!-- <img src={{logo}} alt=""> -->
+    </div>
+</nav>
