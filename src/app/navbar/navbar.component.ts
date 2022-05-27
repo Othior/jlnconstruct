@@ -32,15 +32,7 @@ export class NavbarComponent implements OnInit {
   public menuBurger(menu):void {
     menu.setAttributeNode("active")
     console.log("menu => ", menu.getAttribute("active"))
-    if(menu !== null ){
-      menu.classList.add("active_menu_burger");
-      this.logo = "../../assets/icon/croix.svg"
-
-      // if(menu.classList[1]=== "active_menu_burger"){
-      //   menu.classList.remove("active_menu_burger");
-      //   this.logo = "../../assets/icon/hamburger menu.svg"
-      // }
-    }
+    
   }
   
 }

@@ -1,25 +1,60 @@
-
-/* pour les mobiles  */
+.container_accueil{
+    margin-top: 120px;
+}
 .description_entreprise , .service{
     display: grid;
-    grid-template-columns: 30px 1fr 1fr 30px;
+    grid-template-columns: 125px 1fr 1fr 125px;
     grid-template-rows: 150px 2fr;
-    margin: 0;
-    padding: 0;
-}
-.description_entreprise{
-    grid-template-rows: 150px 2fr;
-    align-items: center;
-    justify-items: center;
-    margin: 3.8rem 0;
-}
-.service{
-    color: white;
-    background: no-repeat center / cover fixed url("../../assets/bg_service.png");
-    align-items: center;
 }
 .titre_service , .block_tuiles_service , .titre_description , .paragraphe_description{
     grid-column: 2/4;
+}
+.description_entreprise{
+    justify-items: flex-start;
+    margin: 2rem 0;
+}
+.block_tuiles_service{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0;
+}
+.tuile_service{
+    margin:0;
+    display: grid;
+    justify-items: center; 
+    position: relative;
+    cursor: pointer;
+}
+.tuile_service::before{
+    content: " ";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    bottom: 49px;
+    left: -5px;
+    background-color: white;
+}
+.tuile_service img {
+    width:25vw;
+    height: 12.5vw;
+    object-fit: cover;
+    transition: all .2s;
+    z-index: 2;
+}
+.tuile_service::after{
+    content: " ";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    top: -5px;
+    right: -5px;
+    background-color: white;
+}
+.tuile_service:hover:after , .tuile_service:hover:before{
+    background-color: #FEE119;
 }
 .titre_description{
     font-weight: bolder;
@@ -32,45 +67,14 @@
     font-size: 18px;
     font-weight: 100;
 }
-.titre_service{
-    grid-row: 1;
-    font-size: 25px;
-    font-weight: bolder;
-    text-transform: uppercase;
+.tuile_service:hover{
+    color: #FEE119;
+    transition: all .2s;
 }
-.block_tuiles_service{
-    grid-row: 2;
-}
-.tuile_service{
-    margin: 2rem 0;
-    display: grid;
-    justify-items: center;
+.service{
+    color: white;
+    background: no-repeat center / cover fixed url("../../assets/bg_service.png");
     align-items: center;
-}
-.tuile_service img::before{
-    content: " ";
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    z-index: 0;
-    bottom: -5px;
-    left: -5px;
-    background-color: white;
-}
-.tuile_service img {
-    width:65vw;
-    height: 32.5vw;
-    object-fit:cover;
-}
-.tuile_service img::after{
-    content: " ";
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    z-index: 0;
-    top: -5px;
-    right: -5px;
-    background-color: white;
 }
 .tuile_service p {
     margin: 1rem 0;
@@ -79,73 +83,126 @@
     text-align: center;
 }
 
-/* pour les pc's */
-@media screen and (min-width: 992px){
+@media screen and (min-width: 500px) and (max-width: 1000px){
     .description_entreprise , .service{
         display: grid;
-        grid-template-columns: 125px 1fr 1fr 125px;
+        grid-template-columns: 5% 1fr 1fr 5%;
         grid-template-rows: 150px 2fr;
+        margin: 0;
+        padding: 0;
+    }
+    .description_entreprise{
+        grid-template-rows: 150px 2fr;
+        align-items: center;
+        justify-items: center;
+        margin: 3.8rem 0;
+    }
+    .service{
+        color: white;
+        background: no-repeat center / cover fixed url("../../assets/bg_service.png");
+        align-items: center;
     }
     .titre_service , .block_tuiles_service , .titre_description , .paragraphe_description{
         grid-column: 2/4;
     }
-    .description_entreprise{
-        justify-items: flex-start;
-    }
     .titre_description{
+        font-weight: bolder;
         font-size: 25px;
-        word-spacing: 0.3em;
+        margin-bottom: 2.5rem;
     }
     .paragraphe_description{
+        grid-row: 2;
+        text-align: justify;
+        font-size: 18px;
         font-weight: 100;
     }
+    .titre_service{
+        grid-row: 1;
+        font-size: 25px;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
     .block_tuiles_service{
+        grid-row: 2;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        margin: 3rem 0;
+        flex-direction: column;
     }
     .tuile_service{
-        margin:0;
+        margin: 2rem 0;
         display: grid;
-        justify-items: center; 
-        position: relative;
-        cursor: pointer;
-    }
-    .tuile_service::before{
-        content: " ";
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        z-index: 0;
-        bottom: 49px;
-        left: -5px;
-        background-color: white;
+        justify-items: center;
+        align-items: center;
     }
     .tuile_service img {
-        width:25vw;
-        height: 12.5vw;
-        object-fit: cover;
-        transition: all .2s;
-        z-index: 2;
+        width:65vw;
+        height: 32.5vw;
+        object-fit:cover;
     }
-    .tuile_service::after{
-        content: " ";
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        z-index: 0;
-        top: -5px;
-        right: -5px;
-        background-color: white;
+    .tuile_service p {
+        margin: 1rem 0;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
     }
-    .tuile_service:hover:after , .tuile_service:hover:before{
-        background-color: #FEE119;
+}
+@media screen and (min-width: 320px) and (max-width: 500px){
+    .description_entreprise , .service{
+        display: grid;
+        grid-template-columns: 5% 1fr 1fr 5%;
+        grid-template-rows: 150px 2fr;
+        margin: 0;
+        padding: 0;
     }
-
-    .tuile_service:hover{
-        color: #FEE119;
-        transition: all .2s;
+    .description_entreprise{
+        grid-template-rows: 150px 2fr;
+        align-items: center;
+        justify-items: center;
+        margin: 3.8rem 0;
+    }
+    .service{
+        color: white;
+        background: no-repeat center / cover fixed url("../../assets/bg_service.png");
+        align-items: center;
+    }
+    .titre_service , .block_tuiles_service , .titre_description , .paragraphe_description{
+        grid-column: 2/4;
+    }
+    .titre_description{
+        font-weight: bolder;
+        font-size: 25px;
+        margin-bottom: 2.5rem;
+    }
+    .paragraphe_description{
+        grid-row: 2;
+        text-align: justify;
+        font-size: 18px;
+        font-weight: 100;
+    }
+    .titre_service{
+        grid-row: 1;
+        font-size: 25px;
+        font-weight: bolder;
+        text-transform: uppercase;
+    }
+    .block_tuiles_service{
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .tuile_service{
+        margin: 2rem 0;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    .tuile_service img {
+        width:65vw;
+        height: 32.5vw;
+        object-fit:cover;
     }
     .tuile_service p {
         margin: 1rem 0;
