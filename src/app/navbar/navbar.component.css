@@ -42,6 +42,7 @@ nav{
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
     nav{
+        grid-template-columns: 5% 1fr 1fr 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -75,6 +76,7 @@ nav{
 }
 @media screen and (min-width: 320px) and (max-width: 500px) {
     nav{
+        grid-template-columns: 5% 1fr 1fr 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
