@@ -81,8 +81,8 @@ nav{
     }
     .logo{
         grid-column: 1/2;
-        width: 20vw;
-        height: 20vh;
+        width: 10vw;
+        height: 10vh;
     }
     .menu_burger{
         display: grid;
