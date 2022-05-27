@@ -20,7 +20,7 @@
     grid-row: 2/3;
     z-index: -2;
 }
-.map{
+.map-container{
     grid-row: 3/4;
     grid-column: 2/4;
 }
@@ -76,7 +76,18 @@ button[type=submit]{
     display: flex;
 }
 
-
+.map-container {
+    margin: 2rem 0;
+  }
+  
+  .map-frame {
+    height: 40rem;
+  }
+  
+  #map {
+    height: 40rem;
+    width: 45vw;
+  }
 /* pour les pc's */
 @media screen and (min-width: 992px){
 
