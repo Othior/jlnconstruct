@@ -1,6 +1,9 @@
 .nav-bar_app{
     margin-bottom: 70px;
 }
-Navbar{
+Navbar,router-outlet, Footer{
     width: 100%;
+}
+router-outlet{
+
 }
