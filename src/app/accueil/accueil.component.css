@@ -11,7 +11,19 @@
 }
 .description_entreprise{
     justify-items: flex-start;
-    margin: 2rem 0;
+    grid-template-rows: 1fr 2fr;
+    margin: 2rem 1.5rem;
+}
+.titre_description{
+    font-weight: bolder;
+    font-size: 25px;
+    margin-bottom: 2rem;
+}
+.paragraphe_description{
+    grid-row: 2;
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 100;
 }
 .block_tuiles_service{
     display: flex;
@@ -56,17 +68,7 @@
 .tuile_service:hover:after , .tuile_service:hover:before{
     background-color: #FEE119;
 }
-.titre_description{
-    font-weight: bolder;
-    font-size: 25px;
-    margin-bottom: 2.5rem;
-}
-.paragraphe_description{
-    grid-row: 2;
-    text-align: justify;
-    font-size: 18px;
-    font-weight: 100;
-}
+
 .tuile_service:hover{
     color: #FEE119;
     transition: all .2s;
