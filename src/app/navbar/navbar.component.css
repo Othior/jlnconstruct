@@ -48,6 +48,8 @@ nav{
     }
     .logo{
         grid-column: 1/2;
+        width: 20vw;
+        height: 20vh;
     }
     .menu_burger{
         display: grid;
@@ -79,6 +81,8 @@ nav{
     }
     .logo{
         grid-column: 1/2;
+        width: 20vw;
+        height: 20vh;
     }
     .menu_burger{
         display: grid;
