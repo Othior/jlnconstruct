@@ -1,94 +1,368 @@
 /* pour les mobiles */
-
-.container_contact{
-    display: grid;
-    grid-template-columns: 30px 1fr 1fr 30px;
-    grid-template-rows: 70px 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+.container_contact {
+  margin: 8rem 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
-.titre_contact{
-    padding-top: 2rem;
+.titre_contact {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+.form_contact {
+  display: flex;
+  justify-content: center;
+  align-content: center; 
+  flex-direction: column;
+}
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 10vw;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    width: 80%;
+    height: 15rem;
+}
+label {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: medium;
+}
+.input_nom,
+.input_phone,
+.input_email,
+.input_message {
+  display: grid;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: .8rem 0;
+  position: relative;
+}
+input {
+  width: 100%;
+}
+.input {
+  height: 2rem;
+  color: var(--primary-color);
+  padding-left: 35px;
+  font-weight: 100;
+}
+.input_message {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+/* .input_nom::before, */
+.input_email::before,
+.input_phone::before,
+.input_message::before {
+  position: absolute;
+  top: 2rem;
+  left: 8.5rem;
+}
+.input_nom {
+  position: relative;
+}
+.input_nom::before {
+  content: url("../../assets/icon/nom_contact.png");
+  position: absolute;
+}
+.input_mobile::after {
+  content: url("../../assets/icon/phone_contact.png");
+}
+.input_email::after {
+  content: url("../../assets/icon/email_contact.png");
+}
+.input_message::after {
+  content: url("../../assets/icon/message_contact.png");
+}
+
+.textarea {
+  width: 208px;
+  padding-left: 35px;
+  padding-top: 5px;
+}
+
+input::placeholder {
+  color: var(--second-color);
+}
+.input_message{
+  
+}
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+  
+}
+button[type="submit"] {
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.map-frame,#map {
+  height: 27rem;
+  width: 100%;
+}
+
+#map {
+  /* width: 100%; */
+}
+.titre_carte {
+  margin: 0rem 0rem 1rem 0rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* desktop / tablette */
+@media screen and (min-width: 50rem) {
+  
+.container_contact {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: 6.5vw 1fr 1fr 6.5vw;
+  grid-template-rows: 8rem 1fr;
+  justify-items: center;
+}
+.titre_contact {
+    text-align: center;
+    margin: 2rem 0rem;
     grid-row: 1;
     grid-column: 2/4;
     font-weight: bold;
     font-size: 25px;
     text-transform: uppercase;
 }
-.form_contact{
-    grid-column: 2/4;
+.form_contact {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  /* z-index: -2; */
+  width: 80%;
+  position: relative;
+}
+.map-container {
+    grid-column: 3/4;
     grid-row: 2/3;
-    z-index: -2;
+    width: 80%;
+    height: 15rem;
 }
-.map-container{
-    grid-row: 3/4;
-    grid-column: 2/4;
+label {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: medium;
 }
-label{
+.input_nom,
+.input_phone,
+.input_email,
+.input_message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1.8rem 0;
+  position: relative;
+}
+input,
+textarea {
+  width: 100%;
+}
+.input_nom::after,
+.input_email::after,
+.input_phone::after,
+.input_message::after {
+  position: absolute;
+  top: 42px;
+  left: 10px;
+}
+.input_nom::after {
+  content: url("../../assets/icon/nom_contact.png");
+}
+.input_phone::after {
+  content: url("../../assets/icon/phone_contact.png");
+}
+.input_email::after {
+  content: url("../../assets/icon/email_contact.png");
+}
+.input_message::after {
+  content: url("../../assets/icon/message_contact.png");
+}
+.input {
+  width: 100%;
+  height: 2rem;
+  color: var(--primary-color);
+  padding-left: 35px;
+  font-weight: 100;
+}
+.textarea {
+  padding-left: 35px;
+  padding-top: 5px;
+}
+
+input::placeholder {
+  color: var(--second-color);
+}
+.input_message{
+  
+}
+.button {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  
+}
+button[type="submit"] {
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.map-frame,#map {
+  height: 27rem;
+  width: 100%;
+}
+
+#map {
+  /* width: 100%; */
+}
+.titre_carte {
+  margin: 1.5rem 0rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+}
+}
+/* desktop */
+@media screen and (min-width: 75rem) {
+  .container_contact {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 6.5vw 1fr 1fr 6.5vw;
+    grid-template-rows: 8rem 1fr;
+    justify-items: center;
+  }
+  .titre_contact {
+      text-align: center;
+      margin: 2rem 0rem;
+      grid-row: 1;
+      grid-column: 2/4;
+      font-weight: bold;
+      font-size: 25px;
+      text-transform: uppercase;
+  }
+  .form_contact {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    /* z-index: -2; */
+    width: 80%;
+    position: relative;
+  }
+  .map-container {
+      grid-column: 3/4;
+      grid-row: 2/3;
+      width: 80%;
+      height: 15rem;
+  }
+  label {
     margin-bottom: 1rem;
-}
-.input_nom , .input_phone , .input_email , .input_message{
+    text-transform: uppercase;
+    font-size: medium;
+  }
+  .input_nom,
+  .input_phone,
+  .input_email,
+  .input_message {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
     margin: 1.8rem 0;
-    position: relative;
-}
-.input_nom::after , .input_email::after , .input_phone::after , .input_message::after{
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+  .input_nom::before,
+  .input_email::before,
+  .input_phone::before,
+  .input_message::before {
     position: absolute;
     top: 42px;
     left: 10px;
-}
-.input_nom::after{
-    content:url("../../assets/icon/nom_contact.png");
-}
-.input_phone::after{
-    content:url("../../assets/icon/phone_contact.png");
-}
-.input_email::after{
-    content:url("../../assets/icon/email_contact.png");
-}
-.input_message::after{
-    content:url("../../assets/icon/message_contact.png");
-}
-.input{
+  }
+  .input_nom::after {
+    content: url("../../assets/icon/nom_contact.png");
+  }
+  .input_phone::after {
+    content: url("../../assets/icon/phone_contact.png");
+  }
+  .input_email::after {
+    content: url("../../assets/icon/email_contact.png");
+  }
+  .input_message::after {
+    content: url("../../assets/icon/message_contact.png");
+  }
+  .input {
     width: 100%;
     height: 2rem;
     color: var(--primary-color);
     padding-left: 35px;
     font-weight: 100;
-}
-.textarea{
+  }
+  .textarea {
+    width: 100%;
     padding-left: 35px;
     padding-top: 5px;
-}
-
-input::placeholder{
-    color: var(--second-color);
-}
-button[type=submit]{
-    text-align: center;
-    background-color: var(--second-color);
-    border:1px solid var(--primary-color);
-    padding: 1rem;
-    color: var(--primary-color);
-    display: flex;
-}
-
-.map-container {
-    margin: 2rem 0;
   }
   
-  .map-frame {
-    height: 40rem;
+  input::placeholder {
+    color: var(--second-color);
+  }
+  .input_message{
+    
+  }
+  .button {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    
+  }
+  button[type="submit"] {
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  .map-frame,#map {
+    height: 27rem;
+    width: 100%;
   }
   
   #map {
-    height: 40rem;
-    width: 45vw;
+    /* width: 100%; */
   }
-/* pour les pc's */
-@media screen and (min-width: 992px){
-
+  .titre_carte {
+    margin: 1.5rem 0rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+  }
 }
