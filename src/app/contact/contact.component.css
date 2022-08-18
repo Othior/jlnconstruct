@@ -42,7 +42,6 @@ label {
   flex-direction: column;
   align-items: center;
   margin: .8rem 0;
-  position: relative;
 }
 input {
   width: 100%;
@@ -52,6 +51,7 @@ input {
   color: var(--primary-color);
   padding-left: 35px;
   font-weight: 100;
+  width: 75vw;
 }
 .input_message {
   width: 100%;
@@ -59,33 +59,36 @@ input {
   justify-content: center;
 }
 
-/* .input_nom::before, */
-.input_email::before,
-.input_phone::before,
-.input_message::before {
+/* teste avec span */
+.icon_input_groupe .icon_nom {
   position: absolute;
-  top: 2rem;
-  left: 8.5rem;
-}
-.input_nom {
-  position: relative;
-}
-.input_nom::before {
+  margin-block-start: .5rem;
+  margin-inline-start: .5rem;
   content: url("../../assets/icon/nom_contact.png");
-  position: absolute;
 }
-.input_mobile::after {
+.icon_input_groupe .icon_phone {
+  position: absolute;
+  margin-block-start: .5rem;
+  margin-inline-start: .5rem;
   content: url("../../assets/icon/phone_contact.png");
 }
-.input_email::after {
+.icon_input_groupe .icon_email {
+  position: absolute;
+  margin-block-start: .5rem;
+  margin-inline-start: .5rem;
   content: url("../../assets/icon/email_contact.png");
 }
-.input_message::after {
+.icon_input_groupe .icon_message {
+  position: absolute;
+  margin-block-start: .5rem;
+  margin-inline-start: .5rem;
   content: url("../../assets/icon/message_contact.png");
 }
 
+/* fin du teste */
+
 .textarea {
-  width: 208px;
+  width: 75vw;
   padding-left: 35px;
   padding-top: 5px;
 }
@@ -130,8 +133,8 @@ button[type="submit"] {
 @media screen and (min-width: 50rem) {
   
 .container_contact {
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-block-start: 3rem;
+  margin-block-end: 5rem;
   display: grid;
   grid-template-columns: 6.5vw 1fr 1fr 6.5vw;
   grid-template-rows: 8rem 1fr;
@@ -153,14 +156,8 @@ button[type="submit"] {
   width: 80%;
   position: relative;
 }
-.map-container {
-    grid-column: 3/4;
-    grid-row: 2/3;
-    width: 80%;
-    height: 15rem;
-}
 label {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   text-transform: uppercase;
   font-size: medium;
 }
@@ -172,41 +169,23 @@ label {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  margin: 1.8rem 0;
+  margin: 0.8rem 0;
   position: relative;
 }
-input,
+/* input,
 textarea {
   width: 100%;
-}
-.input_nom::after,
-.input_email::after,
-.input_phone::after,
-.input_message::after {
-  position: absolute;
-  top: 42px;
-  left: 10px;
-}
-.input_nom::after {
-  content: url("../../assets/icon/nom_contact.png");
-}
-.input_phone::after {
-  content: url("../../assets/icon/phone_contact.png");
-}
-.input_email::after {
-  content: url("../../assets/icon/email_contact.png");
-}
-.input_message::after {
-  content: url("../../assets/icon/message_contact.png");
-}
+} */
+
 .input {
-  width: 100%;
+  width: 34.2vw;
   height: 2rem;
   color: var(--primary-color);
   padding-left: 35px;
   font-weight: 100;
 }
 .textarea {
+  width: 34.2vw;
   padding-left: 35px;
   padding-top: 5px;
 }
@@ -221,7 +200,6 @@ input::placeholder {
   display: flex;
   justify-content: end;
   width: 100%;
-  
 }
 button[type="submit"] {
   text-align: center;
@@ -232,7 +210,7 @@ button[type="submit"] {
 }
 
 .map-frame,#map {
-  height: 27rem;
+  height: 26rem;
   width: 100%;
 }
 
@@ -240,16 +218,26 @@ button[type="submit"] {
   /* width: 100%; */
 }
 .titre_carte {
-  margin: 1.5rem 0rem;
+  margin: 7.5rem 0rem;
+  margin-block-end: 1rem;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 20px;
+}
+.map-container {
+  margin-block-start: 2.9rem;
+  grid-column: 3/4;
+  grid-row: 2/3;
+  width: 80%;
+  margin-inline-start: 0rem;
+  margin-left: 0rem;
+  height: 15rem;
 }
 }
 /* desktop */
 @media screen and (min-width: 75rem) {
   .container_contact {
-    margin-top: 10rem;
+    margin-top: 3rem;
     margin-bottom: 5rem;
     display: grid;
     grid-template-columns: 6.5vw 1fr 1fr 6.5vw;
@@ -258,7 +246,8 @@ button[type="submit"] {
   }
   .titre_contact {
       text-align: center;
-      margin: 2rem 0rem;
+      margin-block-start: 2rem;
+      margin-block-end: 4rem;
       grid-row: 1;
       grid-column: 2/4;
       font-weight: bold;
@@ -269,14 +258,8 @@ button[type="submit"] {
     grid-column: 2/3;
     grid-row: 2/3;
     /* z-index: -2; */
-    width: 80%;
+    width: 100%;
     position: relative;
-  }
-  .map-container {
-      grid-column: 3/4;
-      grid-row: 2/3;
-      width: 80%;
-      height: 15rem;
   }
   label {
     margin-bottom: 1rem;
@@ -292,41 +275,18 @@ button[type="submit"] {
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
-    margin: 1.8rem 0;
+    margin: .8rem 0;
   }
-  input,
-  textarea {
-    width: 100%;
-  }
-  .input_nom::before,
-  .input_email::before,
-  .input_phone::before,
-  .input_message::before {
-    position: absolute;
-    top: 42px;
-    left: 10px;
-  }
-  .input_nom::after {
-    content: url("../../assets/icon/nom_contact.png");
-  }
-  .input_phone::after {
-    content: url("../../assets/icon/phone_contact.png");
-  }
-  .input_email::after {
-    content: url("../../assets/icon/email_contact.png");
-  }
-  .input_message::after {
-    content: url("../../assets/icon/message_contact.png");
-  }
+  
   .input {
-    width: 100%;
+    width: 38vw;
     height: 2rem;
     color: var(--primary-color);
     padding-left: 35px;
     font-weight: 100;
   }
   .textarea {
-    width: 100%;
+    width: 38vw;
     padding-left: 35px;
     padding-top: 5px;
   }
@@ -340,7 +300,7 @@ button[type="submit"] {
   .button {
     display: flex;
     justify-content: end;
-    width: 100%;
+    width: 38vw;
     
   }
   button[type="submit"] {
@@ -352,7 +312,7 @@ button[type="submit"] {
   }
   
   .map-frame,#map {
-    height: 27rem;
+    height: 26rem;
     width: 100%;
   }
   
@@ -360,9 +320,18 @@ button[type="submit"] {
     /* width: 100%; */
   }
   .titre_carte {
-    margin: 1.5rem 0rem;
+    margin: 7.5rem 0rem;
+    margin-block-end: 1rem;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 20px;
+  }
+  .map-container {
+    margin-block-start: 2.9rem;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    width: 90%;
+    margin-inline-start: 2rem;
+    height: 15rem;
   }
 }
