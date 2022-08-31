@@ -3,14 +3,21 @@
     --second-color:#C4C4C4;
     --font-color-placeholder:#838383;
   }
-  *{
+  * *::before,
+  *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  li {
     list-style-type: none;
+  }
+  a {
     text-decoration: none;
+
   }
   body {
     font-family: "Roboto";
     font-size: 15px;
+    margin: 0;
   }
