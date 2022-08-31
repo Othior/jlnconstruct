@@ -1,9 +1,7 @@
 <nav>
-    <div class="logo">
-        <a class="logo_lien" href="">
-            <img class="image_logo" src="../../assets/logo.png" alt="logo" />
-        </a>
-    </div>
+    <a class="logo_lien" href="">
+        <img class="image_logo" src="../../assets/logo.svg" alt="logo" />
+    </a>
     <ul class="lien_groupe" #menu>
         <li class="lien_item" *ngFor="let link of liens">
             <a class="lien" href={{link.lien}}> {{link.nom}}</a>

@@ -3,21 +3,25 @@ nav{
     background: #263248;
     display: grid;
     justify-content: center;
+    align-items: center;
     grid-template-columns: 100px 1fr 1fr 100px;
     right: 0;
     top: 0;
     min-width: 100%;
     position: fixed;
-    padding: 1.5rem;
+    padding: 1rem;
     font-size: 18px;
     z-index: 1000000;
 }
-.logo{
+.logo_lien{
+    margin-block-start: .2rem;
     grid-column: 2/3;
+    align-self: center;
 }
-.logo,.image_logo{
-    width: 30px;
-    height: 30px;
+.image_logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
 }
 .lien_groupe{
     grid-column: 3/4;
